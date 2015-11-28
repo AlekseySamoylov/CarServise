@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="1142.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="carservise1.FXMLDocumentController">
+  <children>
+    <Button fx:id="button" layoutX="400.0" layoutY="399.0" onAction="#handleButtonAction" text="Готово!" />
+    <Label fx:id="label" layoutX="514.0" layoutY="3.0" minHeight="16.0" minWidth="69.0" prefHeight="22.0" prefWidth="268.0" text="nulll" textFill="RED">
+      <font>
+        <Font size="12.0" />
+      </font>
+    </Label>
+    <TextField fx:id="client" layoutX="232.0" layoutY="81.0" prefWidth="163.0" />
+    <TextField fx:id="tel" layoutX="232.0" layoutY="113.0" prefWidth="163.0" />
+    <TextField fx:id="car" layoutX="232.0" layoutY="147.0" prefWidth="163.0" />
+    <TextArea fx:id="works" layoutX="232.0" layoutY="186.0" prefHeight="80.0" prefWidth="207.0" wrapText="true" />
+    <TextField fx:id="price" layoutX="231.0" layoutY="276.0" prefWidth="105.0" />
+    <TextArea fx:id="other" layoutX="231.0" layoutY="316.0" prefHeight="72.0" prefWidth="207.0" wrapText="true" />
+    <Label layoutX="438.0" layoutY="49.0" text="Мастер" />
+    <Label layoutX="395.0" layoutY="83.0" text="Клиент" />
+    <Label layoutX="395.0" layoutY="116.0" text="Телефон" />
+    <Label layoutX="395.0" layoutY="150.0" text="Автомобиль" />
+    <Label layoutX="448.0" layoutY="220.0" text="Работы" />
+    <Label layoutX="336.0" layoutY="279.0" text="рублей Цена" />
+    <Label layoutX="444.0" layoutY="344.0" text="Заметки" />
+    <ComboBox fx:id="comboBox" layoutX="231.0" layoutY="47.0" prefWidth="200.0" promptText="Выбери!">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Button fx:id="cashBox" layoutX="522.0" layoutY="397.0" mnemonicParsing="false" onAction="#clickCashBox" text="касса итого" />
+    <Button layoutX="231.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickZarplata" text="зарплата слесарю" />
+    <Button fx:id="printButton" layoutX="812.0" layoutY="233.0" mnemonicParsing="false" onAction="#clickPrint" text="Выбрать для печати" />
+    <TextField fx:id="vichet" layoutX="627.0" layoutY="331.0" prefHeight="26.0" prefWidth="105.0" />
+    <TextArea fx:id="commVichet" layoutX="629.0" layoutY="257.0" prefHeight="72.0" prefWidth="150.0" promptText="скидка, выдача, трата" />
+    <Label layoutX="527.0" layoutY="336.0" text="Сумма вычета" />
+    <Label layoutX="516.0" layoutY="273.0" text="Причина вычета" />
+    <Button fx:id="vichetOk" layoutX="702.0" layoutY="366.0" mnemonicParsing="false" onAction="#clickVichet" text="Вычесть" />
+    <TextField fx:id="summ" layoutX="363.0" layoutY="11.0" prefHeight="26.0" prefWidth="84.0" promptText="Summ" />
+    <Label layoutX="737.0" layoutY="336.0" text="рублей" />
+    <ListView id="list" fx:id="cashList" layoutX="23.0" layoutY="426.0" prefHeight="225.0" prefWidth="1074.0" />
+    <TextArea fx:id="printArea" layoutX="815.0" layoutY="265.0" prefHeight="120.0" prefWidth="282.0" promptText="print preview" wrapText="true" />
+    <Label layoutX="784.0" layoutY="398.0" text="Search" />
+    <TextField layoutX="831.0" layoutY="395.0" prefWidth="200.0" />
+    <Button layoutX="1041.0" layoutY="396.0" mnemonicParsing="false" text="Search" />
+    <Separator cache="false" layoutX="512.0" layoutY="3.0" opacity="1.0" orientation="VERTICAL" prefHeight="417.0" />
+    <Separator layoutX="514.0" layoutY="246.0" prefWidth="268.0" />
+    <Separator layoutX="781.0" layoutY="6.0" orientation="VERTICAL" prefHeight="417.0" />
+    <Separator layoutX="784.0" layoutY="215.0" prefWidth="358.0" />
+    <Label layoutX="788.0" layoutY="14.0" text="Reg:" />
+    <Label layoutX="831.0" layoutY="14.0" text="Имя" />
+    <Label layoutX="967.0" layoutY="14.0" text="Пароль" />
+    <TextField fx:id="account" layoutX="858.0" layoutY="11.0" prefWidth="105.0" />
+    <PasswordField fx:id="password" layoutX="1009.0" layoutY="11.0" prefWidth="84.0" />
+    <TextArea fx:id="messageArea" disable="true" layoutX="788.0" layoutY="40.0" prefHeight="54.0" prefWidth="186.0" wrapText="true" />
+    <TextArea fx:id="chatArea" editable="false" layoutX="788.0" layoutY="108.0" prefHeight="102.0" prefWidth="340.0" wrapText="true" />
+    <Label layoutX="1063.0" layoutY="82.0" text="Сообщения" />
+    <Button layoutX="1097.0" layoutY="11.0" mnemonicParsing="false" onAction="#clickReg" text="Ok" />
+    <Button layoutX="975.0" layoutY="40.0" mnemonicParsing="false" onAction="#clickSentMessage" text="Sent" />
+    <Separator layoutX="228.0" layoutY="0.0" orientation="VERTICAL" prefHeight="424.0" />
+    <TextField id="client" fx:id="stagesClient" layoutX="11.0" layoutY="12.0" prefWidth="137.0" />
+    <TextField id="tel" fx:id="stagesTel" layoutX="11.0" layoutY="44.0" prefWidth="137.0" />
+    <TextField id="car" fx:id="stagesCar" layoutX="11.0" layoutY="78.0" prefWidth="137.0" />
+    <Label layoutX="148.0" layoutY="14.0" text="Клиент" />
+    <Label layoutX="148.0" layoutY="47.0" text="Телефон" />
+    <Label layoutX="148.0" layoutY="81.0" text="Автомобиль" />
+    <Button layoutX="252.0" layoutY="399.0" mnemonicParsing="false" text="Clear" />
+    <Label layoutX="662.0" layoutY="89.0" text="Касса" />
+    <TextField id="" fx:id="putField" layoutX="630.0" layoutY="183.0" prefHeight="26.0" prefWidth="105.0" />
+    <TextArea id="" fx:id="putArea" layoutX="629.0" layoutY="108.0" prefHeight="72.0" prefWidth="150.0" promptText="на запчасти" />
+    <Label layoutX="523.0" layoutY="188.0" text="Сумма прихода" />
+    <Label layoutX="516.0" layoutY="116.0" text="Причина прихода" />
+    <Button fx:id="putButton" layoutX="696.0" layoutY="215.0" mnemonicParsing="false" onAction="#clickPutMoney" text="Добавить" />
+    <Label layoutX="737.0" layoutY="183.0" text="рублей" />
+    <TextArea fx:id="stagesOther" layoutX="11.0" layoutY="107.0" prefHeight="54.0" prefWidth="200.0" promptText="Что нужно" wrapText="true" />
+    <Button fx:id="stagesButtonSave" layoutX="162.0" layoutY="167.0" mnemonicParsing="false" text="Save" />
+    <ListView fx:id="stagesListView" layoutX="13.0" layoutY="265.0" prefHeight="60.0" prefWidth="196.0" />
+    <Button fx:id="stagesButtonSend" layoutX="117.0" layoutY="233.0" mnemonicParsing="false" text="Разместить" />
+    <Separator layoutX="516.0" layoutY="75.0" prefWidth="268.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="48.000099182128906" layoutX="37.0" layoutY="355.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="29.0" layoutX="70.0" layoutY="344.0" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="29.0" layoutX="70.0" layoutY="384.0" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="29.0" layoutX="129.0" layoutY="344.0" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="29.0" layoutX="129.0" layoutY="384.0" stroke="BLACK" strokeType="INSIDE" width="54.0" />
+    <ComboBox fx:id="stagesChoiceBox" layoutX="12.0" layoutY="197.0" prefHeight="29.0" prefWidth="196.0" promptText="Место ремонта">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Item 1" />
+          <String fx:value="Item 2" />
+          <String fx:value="Item 3" />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <TextField layoutX="621.0" layoutY="397.0" prefHeight="26.0" prefWidth="110.0" />
+    <Label layoutX="731.0" layoutY="402.0" text="руб." />
+    <Button layoutX="447.0" layoutY="11.0" mnemonicParsing="false" text="Выдать" />
+    <Button layoutX="14.0" layoutY="233.0" mnemonicParsing="false" text="Выбрать" />
+    <Button fx:id="print2" layoutX="1040.0" layoutY="234.0" mnemonicParsing="false" onAction="#clickPrint2" text="Печать" />
+  </children>
+</AnchorPane>
